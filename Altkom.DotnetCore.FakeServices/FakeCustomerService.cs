@@ -1,5 +1,6 @@
 ﻿using Altkom.Dotnecore.IServices;
 using Altkom.DotnetCore.Models;
+using Bogus;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,12 +9,13 @@ namespace Altkom.DotnetCore.FakeServices
 {
     public class FakeCustomerService : ICustomerService
     {
-        private ICollection<Customer> _customers;
+        private readonly ICollection<Customer> _customers;
 
-        public FakeCustomerService()
+        public FakeCustomerService(Faker<Customer> faker)
         {
-            _customers = new List<Customer>();
+            _customers = faker.Generate(100);
         }
+
         public void Add(Customer customer)
         {
             _customers.Add(customer);
