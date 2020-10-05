@@ -4,9 +4,9 @@ using System;
 
 namespace Altkom.DotnetCore.Fakers
 {
-    public class CusomerFaker : Faker<Customer>
+    public class CustomerFaker : Faker<Customer>
     {
-        public CusomerFaker()
+        public CustomerFaker()
         {
             RuleFor(p => p.Id, f => f.Random.Guid());
             RuleFor(p => p.FirstName, f => f.Person.FirstName);
