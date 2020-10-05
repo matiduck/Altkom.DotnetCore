@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="31.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Altkom.Dotnecore.IServices\Altkom.DotnetCore.IServices.csproj" />
+    <ProjectReference Include="..\Altkom.DotnetCore.Fakers\Altkom.DotnetCore.Fakers.csproj" />
+    <ProjectReference Include="..\Altkom.DotnetCore.FakeServices\Altkom.DotnetCore.FakeServices.csproj" />
+  </ItemGroup>
+
 </Project>

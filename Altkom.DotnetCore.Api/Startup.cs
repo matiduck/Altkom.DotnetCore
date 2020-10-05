@@ -2,7 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Altkom.Dotnecore.IServices;
 using Altkom.DotnetCore.Api.Middlewares;
+using Altkom.DotnetCore.Fakers;
+using Altkom.DotnetCore.FakeServices;
+using Altkom.DotnetCore.Models;
+using Bogus;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,10 +22,12 @@ namespace Altkom.DotnetCore.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<Faker<Customer>, CustomerFaker>();
+            services.AddSingleton<ICustomerService, FakeCustomerService>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+            // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.Use(async (context, next) =>
            {
