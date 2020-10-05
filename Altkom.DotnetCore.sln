@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotnetCore.Api", "Al
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotnetCore.OwinApi", "Altkom.DotnetCore.OwinApi\Altkom.DotnetCore.OwinApi.csproj", "{1A1BB2DD-E585-4785-AE41-21BBFF23D518}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotnetCore.SignalR", "Altkom.DotnetCore.SignalR\Altkom.DotnetCore.SignalR.csproj", "{D0BB87B3-776F-478A-8924-183DBF721CAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotnetCore.SenderConsoleClient", "Altkom.DotnetCore.SenderConsoleClient\Altkom.DotnetCore.SenderConsoleClient.csproj", "{D5226E05-8AEB-4826-A78C-E39A61800EEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{1A1BB2DD-E585-4785-AE41-21BBFF23D518}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A1BB2DD-E585-4785-AE41-21BBFF23D518}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A1BB2DD-E585-4785-AE41-21BBFF23D518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0BB87B3-776F-478A-8924-183DBF721CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0BB87B3-776F-478A-8924-183DBF721CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0BB87B3-776F-478A-8924-183DBF721CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0BB87B3-776F-478A-8924-183DBF721CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5226E05-8AEB-4826-A78C-E39A61800EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5226E05-8AEB-4826-A78C-E39A61800EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5226E05-8AEB-4826-A78C-E39A61800EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5226E05-8AEB-4826-A78C-E39A61800EEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

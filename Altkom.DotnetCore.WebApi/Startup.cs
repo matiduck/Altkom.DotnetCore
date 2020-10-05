@@ -1,6 +1,7 @@
 using Altkom.Dotnecore.IServices;
 using Altkom.DotnetCore.Fakers;
 using Altkom.DotnetCore.FakeServices;
+using Altkom.DotnetCore.IServices;
 using Altkom.DotnetCore.Models;
 using Bogus;
 using Microsoft.AspNetCore.Builder;
@@ -25,6 +26,7 @@ namespace Altkom.DotnetCore.WebApi
         {
             services.AddSingleton<Faker<Customer>, CustomerFaker>();
             services.AddSingleton<ICustomerService, FakeCustomerService>();
+            services.AddSingleton<IMessageService, FakeSMSMessageService>();
 
             services.AddControllers();
         }
