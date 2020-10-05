@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotnetCore.Models", "Altkom.DotnetCore.Models\Altkom.DotnetCore.Models.csproj", "{B18593AD-08D9-4032-8CED-5E808529F77F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotnetCore.Models", "Altkom.DotnetCore.Models\Altkom.DotnetCore.Models.csproj", "{B18593AD-08D9-4032-8CED-5E808529F77F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotnetCore.IServices", "Altkom.Dotnecore.IServices\Altkom.DotnetCore.IServices.csproj", "{EEEBF251-6A74-4FE8-8A08-647823578C7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotnetCore.IServices", "Altkom.Dotnecore.IServices\Altkom.DotnetCore.IServices.csproj", "{EEEBF251-6A74-4FE8-8A08-647823578C7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotnetCore.FakeServices", "Altkom.DotnetCore.FakeServices\Altkom.DotnetCore.FakeServices.csproj", "{FF17EEE1-6E94-44EA-95E1-BDF5172DFC8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotnetCore.FakeServices", "Altkom.DotnetCore.FakeServices\Altkom.DotnetCore.FakeServices.csproj", "{FF17EEE1-6E94-44EA-95E1-BDF5172DFC8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotnetCore.Fakers", "Altkom.DotnetCore.Fakers\Altkom.DotnetCore.Fakers.csproj", "{48E3C31B-C59D-450F-A1A2-CB1C3E0C0B25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotnetCore.Fakers", "Altkom.DotnetCore.Fakers\Altkom.DotnetCore.Fakers.csproj", "{48E3C31B-C59D-450F-A1A2-CB1C3E0C0B25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotnetCore.WebApi", "Altkom.DotnetCore.WebApi\Altkom.DotnetCore.WebApi.csproj", "{5515ED27-5119-4C29-8E77-611771FCDE80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Altkom.DotnetCore.WebApi", "Altkom.DotnetCore.WebApi\Altkom.DotnetCore.WebApi.csproj", "{5515ED27-5119-4C29-8E77-611771FCDE80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotnetCore.Api", "Altkom.DotnetCore.Api\Altkom.DotnetCore.Api.csproj", "{5FA641F4-C76A-4F51-B75B-ACA42950A2B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{5515ED27-5119-4C29-8E77-611771FCDE80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5515ED27-5119-4C29-8E77-611771FCDE80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5515ED27-5119-4C29-8E77-611771FCDE80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FA641F4-C76A-4F51-B75B-ACA42950A2B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FA641F4-C76A-4F51-B75B-ACA42950A2B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FA641F4-C76A-4F51-B75B-ACA42950A2B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FA641F4-C76A-4F51-B75B-ACA42950A2B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
