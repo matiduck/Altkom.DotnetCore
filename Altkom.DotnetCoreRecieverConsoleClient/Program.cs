@@ -1,35 +1,28 @@
-﻿using Altkom.DotnetCore.Fakers;
-using Altkom.DotnetCore.Models;
+﻿using Altkom.DotnetCore.Models;
 using Microsoft.AspNetCore.SignalR.Client;
 using System;
 using System.Threading.Tasks;
 
-namespace Altkom.DotnetCore.SenderConsoleClient
+namespace Altkom.DotnetCoreRecieverConsoleClient
 {
     class Program
     {
         static async Task Main(string[] args)
         {
             const string url = "http://localhost:5000/signalr/customers";
+            Console.BackgroundColor = ConsoleColor.Blue;
 
-
-            Console.WriteLine("Hello Signal-R Sender!");
+            Console.WriteLine("Hello Signal-R Client!");
 
             HubConnection connection = new HubConnectionBuilder()
                 .WithUrl(url)
-                .WithAutomaticReconnect()
                 .Build();
 
             Console.WriteLine("Connectig...");
             await connection.StartAsync();
             Console.WriteLine("Connected!");
 
-            CustomerFaker customerFaker = new CustomerFaker();
-            Customer customer = customerFaker.Generate();
-
-            Console.WriteLine($"Sending {customer.FirstName} {customer.LastName}");
-            await connection.SendAsync("SendCustomerAdded", customer);
-            Console.WriteLine("Customer send");
+            connection.On<Customer>("AddedCustomer", customer => Console.WriteLine($"Recieved {customer.FirstName} {customer.LastName}"));
             Console.ReadKey();
         }
     }
