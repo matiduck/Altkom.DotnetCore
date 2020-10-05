@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Altkom.Dotnecore.IServices;
+﻿using Altkom.Dotnecore.IServices;
 using Altkom.DotnetCore.Models;
+using Altkom.DotnetCore.Models.SearchCriteria;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace Altkom.DotnetCore.WebApi.Controllers
 {
@@ -25,6 +23,13 @@ namespace Altkom.DotnetCore.WebApi.Controllers
             var customers = _customerService.Get();
 
             return Ok(customers);
+        }
+
+
+        [HttpGet]
+        public IActionResult Get([FromQuery] CustomerSearchCriteria criteria)
+        {
+            throw new NotImplementedException();
         }
 
         [HttpGet("{id}", Name = nameof(GetCustomerById))]
@@ -49,8 +54,8 @@ namespace Altkom.DotnetCore.WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-    
-        public IActionResult Put(Guid id,[FromBody] Customer customer)
+
+        public IActionResult Put(Guid id, [FromBody] Customer customer)
         {
             if (id != customer.Id)
             {
@@ -71,6 +76,14 @@ namespace Altkom.DotnetCore.WebApi.Controllers
             }
 
             _customerService.Update(customer);
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(Guid id)
+        {
+            _customerService.Remove(id);
 
             return NoContent();
         }
