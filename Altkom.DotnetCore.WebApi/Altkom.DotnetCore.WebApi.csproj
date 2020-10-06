@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.UI" Version="3.1.3" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="3.1.2" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.InMemory.Storage" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Altkom.Dotnecore.IServices\Altkom.DotnetCore.IServices.csproj" />
     <ProjectReference Include="..\Altkom.DotnetCore.Fakers\Altkom.DotnetCore.Fakers.csproj" />
     <ProjectReference Include="..\Altkom.DotnetCore.FakeServices\Altkom.DotnetCore.FakeServices.csproj" />

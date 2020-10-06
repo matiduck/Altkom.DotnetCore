@@ -44,12 +44,12 @@ namespace Altkom.DotnetCore.WebApi.Controllers
             return Ok(customer);
         }
 
-        //Routing by type, creating own constraints (IActionContstraint)
-        [HttpGet("{pesel:string}", Name = nameof(GetCustomerByString))]
-        public IActionResult GetCustomerByString(Guid id)
-        {
-            throw new NotImplementedException();
-        }
+        ////Routing by type, creating own constraints (IActionContstraint)
+        //[HttpGet("{pesel:string}", Name = nameof(GetCustomerByString))]
+        //public IActionResult GetCustomerByString(Guid id)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         [HttpPost]
         public IActionResult Post([FromBody] Customer customer)

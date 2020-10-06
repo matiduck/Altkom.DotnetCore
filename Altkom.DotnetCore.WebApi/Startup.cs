@@ -3,7 +3,9 @@ using Altkom.DotnetCore.Fakers;
 using Altkom.DotnetCore.FakeServices;
 using Altkom.DotnetCore.IServices;
 using Altkom.DotnetCore.Models;
+using Altkom.DotnetCore.WebApi.HealthChecks;
 using Bogus;
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -29,6 +31,9 @@ namespace Altkom.DotnetCore.WebApi
             services.AddSingleton<IMessageService, FakeSMSMessageService>();
 
             services.AddControllers();
+            services.AddHealthChecks()
+                .AddCheck<RandomHealthCheck>("random");
+            services.AddHealthChecksUI().AddInMemoryStorage();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +53,12 @@ namespace Altkom.DotnetCore.WebApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecks("/health", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions()
+                {
+                    Predicate = _ => true,
+                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+                });
+                endpoints.MapHealthChecksUI();
             });
         }
     }
