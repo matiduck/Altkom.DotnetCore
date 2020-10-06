@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotnetCore.HostedSer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotnetCore.WorkerService", "Altkom.DotnetCore.WorkerService\Altkom.DotnetCore.WorkerService.csproj", "{CFE4711B-E0E2-4044-84DF-8CF32B09C395}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Altkom.DotnetCore.WindowsService", "Altkom.DotnetCore.WindowsService\Altkom.DotnetCore.WindowsService.csproj", "{3AE4F1CB-EDDE-40AA-AA4E-01C71C3E3563}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{CFE4711B-E0E2-4044-84DF-8CF32B09C395}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFE4711B-E0E2-4044-84DF-8CF32B09C395}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFE4711B-E0E2-4044-84DF-8CF32B09C395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE4F1CB-EDDE-40AA-AA4E-01C71C3E3563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE4F1CB-EDDE-40AA-AA4E-01C71C3E3563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE4F1CB-EDDE-40AA-AA4E-01C71C3E3563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE4F1CB-EDDE-40AA-AA4E-01C71C3E3563}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
